@@ -283,6 +283,7 @@ class MyWindow(QMainWindow, Ui_mainWindow):
             hls_flag = True
             cv.destroyAllWindows()
             cv.namedWindow('HLS_img', cv.WINDOW_NORMAL)
+            self.update_img()
         self.slider_init()
         self.c1_l_horizontalSlider.setEnabled(True)
         self.c1_h_horizontalSlider.setEnabled(True)

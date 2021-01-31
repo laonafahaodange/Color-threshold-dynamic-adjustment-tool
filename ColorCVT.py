@@ -79,11 +79,11 @@ class MyWindow(QMainWindow, Ui_mainWindow):
 
             l = hls_img[:, :, 1]
             l_bin = np.zeros_like(l)
-            l_bin[(l >= hls_min[1]) & (l <= hls_min[1])] = 255
+            l_bin[(l >= hls_min[1]) & (l <= hls_max[1])] = 255
 
             s = hls_img[:, :, 2]
             s_bin = np.zeros_like(s)
-            s_bin[(s >= hls_min[2]) & (s <= hls_min[2])] = 255
+            s_bin[(s >= hls_min[2]) & (s <= hls_max[2])] = 255
 
             # 二值化只需要一个通道，这里随便取其中一个通道
             hls_bin = np.zeros_like(h)
